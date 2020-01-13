@@ -15,6 +15,9 @@ class CreateTransfersTable extends Migration
     {
         Schema::create('transfers', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->text('description');
+            $table->float('amount');
+            $table->integer('wallet_id')->unsigned();
             $table->timestamps();
         });
     }
